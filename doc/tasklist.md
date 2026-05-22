@@ -12,7 +12,7 @@
 |:--------:|----------|:------:|----------|
 | 0 | Каркас проекта | ✅ | `uv sync` без ошибок |
 | 1 | Демо-данные Kaggle | ✅ | JSON читается, ≥5 датасетов |
-| 2 | Ingestion | ⬜ | `documents.jsonl` создан |
+| 2 | Ingestion | ✅ | `documents.jsonl` создан |
 | 3 | Chunking | ⬜ | `chunks.jsonl`, тест chunking |
 | 4 | Индекс TF-IDF | ⬜ | файлы в `data/index/` |
 | 5 | Retrieval | ⬜ | top-k + score в консоли |
@@ -24,8 +24,8 @@
 
 **Легенда:** ⬜ не начато · 🔄 в работе · ✅ готово · ❌ блокер
 
-**Текущая итерация:** 2  
-**Готовность MVP:** 2 / 11
+**Текущая итерация:** 3  
+**Готовность MVP:** 3 / 11
 
 ---
 
@@ -59,8 +59,8 @@ uv run python -c "import json; d=json.load(open('data/raw/datasets.json')); prin
 
 ## Итерация 2 — Ingestion
 
-- [ ] `scripts/ingest.py` — JSON → `data/processed/documents.jsonl`
-- [ ] Очистка текста, метаданные (`doc_id`, `name`, `source_file`)
+- [x] `scripts/ingest.py` — JSON → `data/processed/documents.jsonl`
+- [x] Очистка текста, метаданные (`doc_id`, `name`, `source_file`)
 
 **Проверка:**
 ```bash
